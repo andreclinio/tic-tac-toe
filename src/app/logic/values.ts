@@ -3,11 +3,11 @@ type MarkTag = 'x' | 'o';
 
 export class Mark {
 
-  private constructor(private tag: MarkTag, public readonly icon: string) {
+  private constructor(private tag: MarkTag, public readonly color: string) {
   }
 
-  public static readonly X = new Mark('x', 'X');
-  public static readonly O = new Mark('o', 'O');
+  public static readonly X = new Mark('x', 'coral');
+  public static readonly O = new Mark('o', 'cyan');
 
   public equals(other: Value): boolean {
     if (!other) return false;
